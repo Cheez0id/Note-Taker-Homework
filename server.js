@@ -26,6 +26,7 @@ app.get('/api/notes', (req, res) =>{
 })
 
 app.post('/api/notes', (req, res) => {
+  req.body.id=Math.floor(Math.random()*10000)
   notes.push (req.body)
   fs.writeFileSync ("./db/db.json", JSON.stringify(notes))
   res.json (notes);
