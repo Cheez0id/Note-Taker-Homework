@@ -13,13 +13,13 @@ app.use(express.json());
 
 app.use(express.static('public'));
 
-app.get('/notes', (req, res) =>{
-  res.redirect("/notes");
-})
+// app.get('/notes', (req, res) =>{
+//   res.redirect("/notes");
+// })
 
-app.get('/', (req, res) =>{
-  res.redirect("/index");
-})
+// app.get('/', (req, res) =>{
+//   res.redirect("/index");
+// })
 
 app.get('/api/notes', (req, res) =>{
   res.json(notes);
